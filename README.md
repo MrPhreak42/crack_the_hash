@@ -195,11 +195,11 @@ Can you complete the level 1 tasks by cracking the hashes?
 
   - So as you may the workflow is almost the same as previous ones so let's get straight to the point
   
-  <img src="screenshots/06/01.png" alt="Logo" width="700" height="auto">
+  <img src="screenshots/05/01.png" alt="Logo" width="700" height="auto">
 
   - And there it is:
   
-  <img src="screenshots/06/02.png" alt="Logo" width="700" height="auto">
+  <img src="screenshots/05/02.png" alt="Logo" width="700" height="auto">
   
 
 
