@@ -89,6 +89,11 @@ Can you complete the level 1 tasks by cracking the hashes?
   
     <img src="screenshots/02/04.png" alt="Logo" width="700" height="auto">
 
+  - And that's all for the second hash:  
+    
+    <img src="screenshots/02/05.png" alt="Logo" width="700" height="auto">
+  
+
  # Hash 03 ⬇️
   
   ````
@@ -134,11 +139,72 @@ Can you complete the level 1 tasks by cracking the hashes?
 - Each hash hash its "code mode" so for bcrypt hashes we'll use "3200"
   
   ````
-  hashcat -m 3200 <your_hash.txt> path/to/your/wordlists/rockyou.txt --force -O
+  hashcat -m 3200 <your_hash.txt> path/to/your/wordlists/rockyou.txt
   ````   
-- --force: Forces hashcat to continue despite encountering an error or warning. It's used to ensure that the cracking process continues even if there are issues.
-- -O: Enables optimized kernels for the cracking process, which can improve performance.
-  
   <img src="screenshots/04/02.png" alt="Logo" width="700" height="auto">
 
   ##### Now you may go and take some coffee because its taking a very long time depending on your machine setup ☕
+
+- When it gets finished... if are not seeing your hash run this command ⬇️
+  
+  ````
+  hashcat -m 3200 <your_hash.txt> path/to/your/wordlists/rockyou.txt --show
+  ````   
+  <img src="screenshots/04/03.png" alt="Logo" width="700" height="auto">
+
+- And we're done for this one:
+  
+  <img src="screenshots/04/04.png" alt="Logo" width="700" height="auto">
+
+
+<!-- # Hash 05 ⬇️
+  
+  ````
+  279412f945939ba78ce0758d3fd83daa
+  ```` 
+- Let's try to identify this one:
+
+    <img src="screenshots/05/01.png" alt="Logo" width="700" height="auto">
+  
+- Sometimes hash-identifier might be a little tricky, but don't worry, a bit of patient, research and experience you'll know what you're dealing with
+- So for this case we know that is a md4 hash
+- And just like the previous ones we're sending it to a ".txt" file so our work gets easier
+
+  <img src="screenshots/05/02.png" alt="Logo" width="700" height="auto">
+
+
+- If you did look at [HashCat Website](https://hashcat.net/wiki/doku.php?id=example_hashes) should know by now that our mode to the this crack is 900, right?
+  
+  ````
+  hashcat -m 900 <your_hash.txt> path/to/your/wordlists/rockyou.txt
+  ````   
+  <img src="screenshots/05/03.png" alt="Logo" width="700" height="auto">
+  
+  - Wanna use John The Reaper for this one? No problem ⬇️
+  
+  ````
+  john --format=raw-md4 --wordlist=path/to/your/wordlists/rockyou.txt <your_hash.txt>
+  ````    -->
+
+
+  # Hash 05 ⬇️
+    
+  ````
+  F09EDCB1FCEFC6DFB23DC3505A882655FF77375ED8AA2D1C13F640FCCC2D0C85
+  ```` 
+
+  - So as you may the workflow is almost the same as previous ones so let's get straight to the point
+  
+  <img src="screenshots/06/01.png" alt="Logo" width="700" height="auto">
+
+  - And there it is:
+  
+  <img src="screenshots/06/02.png" alt="Logo" width="700" height="auto">
+  
+
+
+  <!-- # Hash 07 ⬇️
+  
+  ````
+  1DFECA0C002AE40B8619ECF94819CC1B
+  ````     -->
